@@ -2,24 +2,37 @@
 FSDRNet: A Dynamic Recovery Network Based on Frequency-Spatial Collaborative Processing
 
 <div align="center">
-    <img src="Fig1.png" alt="FSDRNet模型架构图" width="800"/>
+    <img src="Fig1.png" alt="FSDRNet Model Architecture" width="800"/>
 </div>
 
-## 项目简介
+## Datasets
+FSDRNet was trained and evaluated on the following public datasets:
 
-FSDRNet (Frequency-Spatial Collaborative Dynamic Recovery Network) 是一种创新的图像恢复网络，通过多域协作特征增强和动态路由处理实现高效图像恢复。本项目将不同的图像退化类型视为多域信号表示问题，而非独立任务，建立了一个统一的图像恢复框架。
+### Derain
+- Rain200L/Rain100L: [Download Link](https://www.icst.pku.edu.cn/struct/Projects/joint_rain_removal.html) - Click "The dataset" on the page to download
 
-### 主要特点
+### Dehaze
+- RESIDE: [Official Website](https://sites.google.com/view/reside-dehaze-datasets/)
+  - SOTS-Outdoor: [Dropbox](https://bit.ly/2XZH498) or [Baidu Drive](https://pan.baidu.com/share/init?surl=SSVzR058DX5ar5WL5oBTLg) (password: s6tu)
 
-- **多域协作处理**：融合空间域和频率域信息，充分利用两个域的互补优势
-- **动态调节机制**：根据输入特性自动调整参数，有效处理单一、复合和未知退化类型
-- **物理引导的滤波器**：基于物理先验设计专用滤波器，实现精确恢复
-- **出色的跨任务性能**：在去噪、去模糊、去雾、去雨和低光增强多任务上表现优异
+### Denoise
+- BSD400: [GitHub Download](https://github.com/smartboy110/denoising-datasets)
+- BSD68: [GitHub Download](https://github.com/smartboy110/denoising-datasets) or [Berkeley Dataset](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/)
+- Urban100: [Public Dataset](https://github.com/JingyiXu404/MCSCNet) in the test data section
+- Kodak24: [GitHub Download](https://github.com/MohamedBakrAli/Kodak-Lossless-True-Color-Image-Suite)
 
-## 安装要求
+### Deblur
+- GoPro: [Official Website](https://seungjunnah.github.io/Datasets/gopro.html) - Contains 3,214 image pairs for deblurring training and testing
 
-```bash
-# 环境要求
+### Delol
+- LOL (Low-Light): [Kaggle Download](https://www.kaggle.com/datasets/soumikrakshit/lol-dataset) - Contains 500 pairs of low-light/normal-light images
+
+<div align="center">
+    <img src="Table1.png" alt="Experimental Results Table" width="800"/>
+    <p>Table 1: Performance comparison with existing methods on multiple datasets</p>
+</div>
+
+# Environment Requirements
 python >= 3.7
 pytorch >= 1.7.0
 numpy
@@ -36,4 +49,5 @@ tqdm==4.64.0
 matplotlib
 torchvision
 
-
+## Note
+The remaining code is still being organized. Please stay tuned.
