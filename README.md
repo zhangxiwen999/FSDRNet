@@ -35,5 +35,5 @@ timm==0.6.7
 tqdm==4.64.0
 matplotlib
 torchvision
-所有的代码还在进行整理，尽情期待
-如需要数据集可参考
+
+
