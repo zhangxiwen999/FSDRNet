@@ -1,11 +1,24 @@
 # FSDRNet：A Dynamic Recovery Network Based on Frequency-Spatial Collaborative Processing
-
+# ABSTRACT
+In traditional image restoration research, various image degradation types are typically treated as independent tasks, neglecting the intrinsic connections between degradation phenomena. Although All-in-one models have made progress in handling multiple degradation types within a single network, these methods still fail to fully exploit the correlations between different degradation types, limiting their ability to address complex scenarios. This paper proposes a Frequency-Spatial Collaborative Dynamic Recovery Network (FSDRNet) that achieves efficient image restoration through multi-domain collaborative feature enhancement and dynamic routing processing. In the feature enhancement stage, the spatial feature processing module employs a balanced feature mixing attention mechanism (EFMA) to precisely characterize local textures, while the frequency domain auxiliary module extracts global structural patterns through Fourier transforms and transmits key information to the spatial module via degradation guidance signals, establishing a unidirectional enhancement mechanism. In the dynamic processing stage, the network adaptively adjusts parameters according to degradation types and achieves precise restoration through physically-guided specialized filters. Extensive experiments demonstrate that FSDRNet achieves excellent performance across multiple tasks including denoising, deblurring, dehazing, deraining, and low-light enhancement, with an average PSNR of 28.52dB, while exhibiting significant generalization capability for unknown compound degradation. 
 <div align="center">
     <img src="Fig1.png" alt="FSDRNet Model Architecture" width="800"/>
 </div>
 Fig. 1. Spatial-Spectral Dual-Domain Framework for Degradation Selection and Image Restoration. The framework integrates spatial domain processing with spectral analysis to identify and address multiple degradation types (S, Mix, I, K) with corresponding restoration strategies.
 
-## Datasets
+# Environment Requirements
+<pre>
+python==3.9.21
+torch==1.11.0+cu113
+torchvision==0.12.0+cu113
+torchaudio==0.11.0+cu113
+</pre>
+#### The additional environment can be downloaded via the following commands:FSDRNet-main
+<pre>
+pip install -r requirements.txt
+</pre>
+
+# Datasets
 FSDRNet was trained and evaluated on the following public datasets:
 
 ### Derain
@@ -31,23 +44,6 @@ FSDRNet was trained and evaluated on the following public datasets:
     <img src="Table1.png" alt="Experimental Results Table" width="800"/>
     <p>Table 1: Performance comparison with existing methods on multiple datasets</p>
 </div>
-
-# Environment Requirements
-python >= 3.7
-pytorch >= 1.7.0
-numpy
-einops==0.4.1
-opencv_python==4.6.0.66
-PyYAML==6.0
-scikit_image==0.19.3
-scikit_learn==1.0.2
-scipy==1.7.3
-tensorboardX==2.1
-termcolor==1.1.0
-timm==0.6.7
-tqdm==4.64.0
-matplotlib
-torchvision
 
 ## Note
 The remaining code is still being organized. Please stay tuned.
