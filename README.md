@@ -1,9 +1,9 @@
-# FSDRNet
-FSDRNet: A Dynamic Recovery Network Based on Frequency-Spatial Collaborative Processing
+# FSDRNet：A Dynamic Recovery Network Based on Frequency-Spatial Collaborative Processing
 
 <div align="center">
     <img src="Fig1.png" alt="FSDRNet Model Architecture" width="800"/>
 </div>
+Fig. 1. Spatial-Spectral Dual-Domain Framework for Degradation Selection and Image Restoration. The framework integrates spatial domain processing with spectral analysis to identify and address multiple degradation types (S, Mix, I, K) with corresponding restoration strategies.
 
 ## Datasets
 FSDRNet was trained and evaluated on the following public datasets:
